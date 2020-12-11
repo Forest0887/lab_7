@@ -3,17 +3,30 @@ package com.sc;
 import com.Rent_Object;
 
 public class Hostel extends Simple_Construction implements Rent_Object {
+    private int price;
 
     public Hostel(int number, String title){
         super(number, title);
     }
 
     @Override
-    void repair() {
+    public void repair() {
         System.out.println("Нам помогут студенты-строители на практике!");
     }
 
-    public void rent() {
-        System.out.println((int) (Math.random() * (999 + 1)));
+    @Override
+    public int price() {
+        return price;
     }
+
+    @Override
+    public String title() {
+        return "Общежитие";
+    }
+
+    public void rent() {
+        price = (int) (Math.random() * (999 + 1));
+        System.out.println("Цена за Общежитие " + price);
+    }
+
 }

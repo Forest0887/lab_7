@@ -7,7 +7,7 @@ public class Library extends Simple_Construction {
     }
 
     @Override
-    void repair() {
+    public void repair() {
         System.out.println("Аккуратней с книгами!");
     }
 
